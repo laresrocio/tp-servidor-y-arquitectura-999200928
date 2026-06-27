@@ -1,0 +1,24 @@
+{
+  "name": "tp-servidor-y-arquitectura-999200928",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev ": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laresrocio/tp-servidor-y-arquitectura-999200928.git"
+  },
+  "keywords": [
+    "servidor",
+    "arquitectura"
+  ],
+  "author": "laresrociod@gmail.com",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/laresrocio/tp-servidor-y-arquitectura-999200928/issues"
+  },
+  "homepage": "https://github.com/laresrocio/tp-servidor-y-arquitectura-999200928#readme"
+}

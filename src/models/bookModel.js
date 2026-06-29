@@ -18,7 +18,8 @@ const bookSchema = new Schema(
     },
     status: {
       type: String,
-      default: "To Read"
+      enum: ["read", "reading", "to read"],
+      default: "to read"
     },
     userId: {
       type: Schema.Types.ObjectId,

@@ -1,9 +1,10 @@
-import express from 'express';
+import express from 'express'
 import { connectToMongoDB } from './src/config/mongoDbConnection.js';
 import { AuthRouter } from './src/routes/authRouter.js';
 import { BookRouter } from './src/routes/bookRouter.js';
-import cors from 'cors';
-import { config } from 'dotenv';
+import { authMiddleware } from './src/middlewares/authMiddleware.js'
+import cors from 'cors'
+import { config } from 'dotenv'
 
 config();
 
@@ -28,7 +29,7 @@ server.get('/', (req, res) => {
 //route for registering a new user and login
 server.use("/mylibrary/auth", AuthRouter)
 //route for book management
-server.use("/mylibrary/books", BookRouter)
+server.use("/mylibrary/books", authMiddleware, BookRouter)
 
 server.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);

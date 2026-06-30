@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { registerUser, loginUser } from '../controllers/authControllers.js'
-
+import { limiter } from '../middlewares/limiterMiddleware.js'
 const AuthRouter = Router();
 
 //test route to check if the auth router is working
@@ -9,6 +9,6 @@ AuthRouter.get('/test', (req, res) => {
 });
 
 AuthRouter.post('/register', registerUser);
-AuthRouter.post('/login', loginUser);
+AuthRouter.post('/login', limiter, loginUser);
 
 export { AuthRouter }

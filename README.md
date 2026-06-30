@@ -1,4 +1,4 @@
-# 📚 MyLibrary API
+# MyLibrary API
 
 ## Descripción
 
@@ -48,9 +48,9 @@ npm install
 3. Crear un archivo `.env`.
 
 ```env
-PORT=3000
-URI_DB=mongodb://127.0.0.1:27017/db_server_tp
-SECRET_KEY=your_secret_key
+PORT=
+URI_DB=
+SECRET_KEY=
 ```
 
 4. Iniciar MongoDB.
